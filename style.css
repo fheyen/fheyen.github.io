@@ -1,0 +1,159 @@
+/*
+Dropdown menu code from Andor Nagy
+https://codepen.io/andornagy/pen/xhiJH
+*/
+
+* {
+    --textColor: #eee;
+    --textColor2: #ccc;
+    --bodyBgColor: #222;
+    --linkColor: rgb(83, 159, 221);
+}
+
+body,
+main {
+    margin: 0;
+    background-color: var(--bodyBgColor);
+    color: var(--textColor);
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px auto;
+}
+
+
+header {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+
+header h1 {
+    margin: 5px 10px;
+    text-align: left;
+}
+
+nav {
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+article {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
+
+section {
+    background-color: #333;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.2em;
+}
+
+nav a,
+nav a:visited {
+    display: block;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 40px;
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+nav a:hover {
+    color: var(--linkColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--textColor);
+}
+
+
+
+@media (min-width: 768px) {
+    /* tablet layout */
+    main {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    /* desktop layout */
+    main {
+        max-width: 1000px;
+    }
+}
+
+
+section.heading {
+    grid-area: span 1 / span 2;
+    margin-top: 20px;
+    padding: 0;
+}
+
+section.span2 {
+    grid-area: span 1 / span 2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+h2 {
+
+}
+
+section a,
+section a:visited {
+    color: var(--linkColor);
+}
+
+/* Icons in links */
+section a i {
+    color: #eee;
+    margin: 0 6px;
+}
+
+
+/* Images */
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+p.authors {
+    font-size: 0.9em;
+    color: var(--textColor2);
+}
+p.authors .issue {
+    margin-right: 10px;
+    padding: 2px 4px;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
