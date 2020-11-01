@@ -1,8 +1,3 @@
-/*
-Dropdown menu code from Andor Nagy
-https://codepen.io/andornagy/pen/xhiJH
-*/
-
 * {
     --textColor: #eee;
     --textColor2: #ccc;
@@ -22,18 +17,17 @@ main {
 main {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 180px auto;
 }
-
 
 header {
     padding: 10px;
     position: fixed;
     top: 0;
+    background-color: var(--bodyBgColor);
 }
 
 header h1 {
-    margin: 5px 10px;
+    margin: 0 10px;
     text-align: left;
 }
 
@@ -44,11 +38,9 @@ nav {
 
 article {
     margin: 5px;
+    padding-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-
+    grid-gap: 5px;
 }
 
 section {
@@ -56,7 +48,6 @@ section {
     border-radius: 4px;
     padding: 10px 20px;
 }
-
 
 nav ul {
     padding: 0;
@@ -93,18 +84,62 @@ a:visited {
 }
 
 
-
-@media (min-width: 768px) {
+/* Responsiveness */
+@media (min-width: 0px) {
     /* tablet layout */
     main {
-        max-width: 100%;
+        grid-template-columns: auto;
+        max-width: 1000px;
+    }
+    header {
+        padding-top: 0;
+        width: 100%;
+    }
+    header > div,
+    nav ul li {
+        display: inline-block;
+    }
+    .h1desktop {
+        display: none;
+    }
+    header .titleIndented {
+        margin: 0;
+    }
+    article {
+        margin-top: 55px;
+        grid-template-columns: auto;
+    }
+    section {
+        grid-area: span 1 / span 2;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1020px) {
     /* desktop layout */
     main {
-        max-width: 1000px;
+        grid-template-columns: 180px auto;
+    }
+    header {
+        padding-top: 20px;
+        width: 160px;
+    }
+    header > div,
+    .h1desktop,
+    nav ul li {
+        display: block;
+    }
+    .h1mobile {
+        display: none;
+    }
+    header .titleIndented {
+        margin-left: 20px;
+    }
+    article {
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+    section {
+        grid-area: span 1 / span 1;
     }
 }
 
