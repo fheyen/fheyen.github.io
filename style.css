@@ -37,15 +37,15 @@ nav {
 }
 
 article {
-    margin: 5px;
+    margin: 0 5px 5px 5px;
     padding-bottom: 20px;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 6px;
 }
 
 section {
     background-color: #333;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 10px 20px;
 }
 
@@ -85,7 +85,8 @@ a:visited {
 
 a.anchor {
     position: relative;
-    top: -55px;
+    top: -70px;
+    visibility: hidden;
 }
 
 /* Responsiveness */
@@ -94,7 +95,7 @@ a.anchor {
     main {
         grid-template-columns: auto;
         max-width: 1000px;
-        margin-top: 75px;
+        margin-top: 65px;
     }
     header {
         padding-top: 0;
@@ -155,6 +156,9 @@ a.anchor {
     section {
         grid-area: span 1 / span 1;
     }
+    a.anchor {
+        top: -5px;
+    }
 }
 
 
@@ -169,12 +173,14 @@ section.span2 {
 }
 
 h1 {
+    margin: 18px 0;
     text-align: center;
     font-size: 28px;
 }
 
 h2 {
-
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 section a,
